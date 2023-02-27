@@ -1,0 +1,30 @@
+{
+    "name": "typescript-express-vue-starter",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "pnpm -F api start",
+        "build": "turbo run build",
+        "dev": "turbo run dev",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,vue,md}\"",
+        "db:push": "pnpm -F api run db:push",
+        "commit": "git add . && git commit -m"
+    },
+    "devDependencies": {
+        "eslint": "^7.23.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-config-turbo": "latest",
+        "prettier": "latest",
+        "turbo": "latest"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {},
+    "packageManager": "pnpm@7.27.1"
+}

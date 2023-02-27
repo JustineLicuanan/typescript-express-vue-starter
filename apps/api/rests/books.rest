@@ -1,0 +1,34 @@
+@baseURL = http://localhost:3000/api/books
+
+# Create an entity
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+    "title": "Lorem Ipsum"
+}
+
+###
+
+# Get all entities
+GET {{baseURL}}
+
+###
+
+# Get an entity
+GET {{baseURL}}/1
+
+###
+
+# Update an entity
+PATCH {{baseURL}}/1
+Content-Type: application/json
+
+{
+    "title": "Dolor Sit"
+}
+
+###
+
+# Remove an entity
+DELETE {{baseURL}}/1
